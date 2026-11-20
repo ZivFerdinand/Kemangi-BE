@@ -1,0 +1,23 @@
+server:
+  port: 8084
+
+# SPRING CONF
+spring:
+  application:
+    name: pavo
+  flyway:
+    enabled: false
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+      location: /bcapavo/bin/eap/jboss-eap-8.1
+
+  datasource:
+     url: jdbc:postgresql://10.43.27.135:5515/dpavong
+     username: pavong
+     password: devpavong
+#    jndi-name: java:/ds_pavongbe
+     driver-class-name: org.postgresql.Driver
+     initialization-mode: always
+     validation-query: SELECT 1
